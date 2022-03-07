@@ -8,7 +8,7 @@ class MongoConnection {
 			console.log("Database connected");
 		} catch (e) {
 			console.error(e.message);
-			process.exit(1);
+			this.connect();
 		}
 	}
 }
