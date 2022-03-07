@@ -15,7 +15,7 @@ export class URLController {
 		}
 
 		const hash = shortId.generate();
-		const shortURL = `${config.API_URL}:${config.API_PORT}/${hash}`;
+		const shortURL = `${config.API_URL}/${hash}`;
 		const newURL = await URLModel.create({ hash, shortURL, originURL });
 		resp.status(201).json(newURL);
 	}
